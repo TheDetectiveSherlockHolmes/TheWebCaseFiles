@@ -1,13 +1,11 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Root & Typography */
 html {
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; 
   scroll-behavior: smooth;
 }
 
@@ -26,7 +24,6 @@ body {
   background: #f5f7fb
  */
 
-/* Global Section Styling */
 .section {
   padding: 6rem 8vw;
   text-align: center;
@@ -50,7 +47,7 @@ body {
   color: #364152;
 }
 
-/* Header */
+
 .header {
   position: sticky;
   top: 0;
@@ -101,7 +98,6 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
 .hero {
   min-height: 90vh;
   padding: 8rem 8vw 6rem;
@@ -155,7 +151,7 @@ body {
   gap: 1.4rem;
 }
 
-/* Hero Image */
+
 .hero-image {
   flex: 1 1 28rem;
   display: flex;
@@ -173,7 +169,7 @@ body {
   animation: floatImage 4s ease-in-out infinite;
 }
 
-/* Buttons */
+
 .btn {
   display: inline-block;
   padding: 1rem 2.4rem;
@@ -210,12 +206,11 @@ body {
   transform: translateY(-0.2rem);
 }
 
-/* About Section */
 .about {
   background-color: #ffffff;
 }
 
-/* Grid Layout (Skills & Projects) */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -223,7 +218,7 @@ body {
   margin-top: 2.4rem;
 }
 
-/* Cards */
+
 .card {
   background-color: #ffffff;
   border-radius: 1.6rem;
@@ -250,7 +245,6 @@ body {
   box-shadow: 0 1.6rem 3.2rem rgba(15, 23, 42, 0.12);
 }
 
-/* Skill Tag */
 .tag {
   display: inline-block;
   padding: 0.4rem 1.2rem;
@@ -261,7 +255,7 @@ body {
   font-weight: 600;
 }
 
-/* Projects */
+
 .project-card {
   position: relative;
 }
@@ -276,7 +270,7 @@ body {
   font-weight: 600;
 }
 
-/* Contact */
+
 .contact {
   background-color: #ffffff;
 }
@@ -317,7 +311,6 @@ body {
   box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.15);
 }
 
-/* Footer */
 .footer {
   background-color: #004aad;
   color: #ffffff;
@@ -347,7 +340,6 @@ body {
   opacity: 1;
 }
 
-/* Back to Top Floating Button */
 #backToTop {
   position: fixed;
   bottom: 2rem;
@@ -372,7 +364,6 @@ body {
   box-shadow: 0 1.4rem 2.4rem rgba(0, 0, 0, 0.32);
 }
 
-/* Animations */
 @keyframes colorShift {
   0% {
     background-position: 0% 50%;
@@ -408,9 +399,7 @@ body {
   }
 }
 
-/* Responsive Design */
 
-/* Tablets and smaller laptops */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -443,7 +432,6 @@ body {
   }
 }
 
-/* Mobile screens */
 @media (max-width: 600px) {
   .nav {
     gap: 1.2rem;
