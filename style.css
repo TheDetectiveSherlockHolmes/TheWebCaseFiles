@@ -1,0 +1,476 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root & Typography */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2933;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+/* Color Variables (using comments instead of :root for simplicity)
+  primary: #004aad
+  primary-dark: #003380
+  accent: #ffb703
+  background: #f5f7fb
+ */
+
+/* Global Section Styling */
+.section {
+  padding: 6rem 8vw;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #004aad;
+  margin-bottom: 0.8rem;
+}
+
+.section-subtitle {
+  font-size: 1.6rem;
+  color: #51606f;
+  margin-bottom: 2.4rem;
+}
+
+.section-text {
+  max-width: 70rem;
+  margin: 0 auto;
+  color: #364152;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #004aad;
+  color: #ffffff;
+  padding: 1.4rem 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #ffb703;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 90vh;
+  padding: 8rem 8vw 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 32rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-greeting {
+  font-size: 1.6rem;
+  color: #51606f;
+  margin-bottom: 0.4rem;
+}
+
+.hero-name {
+  font-size: 4rem;
+  margin-bottom: 0.6rem;
+  color: #1f2933;
+}
+
+.hero-role {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.role-title {
+  display: inline-block;
+  font-weight: 700;
+  background: linear-gradient(90deg, #004aad, #ffb703);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 3s linear infinite;
+}
+
+.hero-description {
+  max-width: 52rem;
+  color: #364152;
+  margin-bottom: 2.4rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 28rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: min(50rem, 60vw);
+  border-radius: 50%;
+  border: 0.4rem solid #004aad;
+  padding: 0.6rem;
+  background-color: #ffffff;
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.12);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0.15rem solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #004aad;
+  color: #ffffff;
+  box-shadow: 0 0.8rem 1.8rem rgba(0, 74, 173, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #003380;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 51, 128, 0.45);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #004aad;
+  border-color: #004aad;
+}
+
+.btn-outline:hover {
+  background-color: #004aad;
+  color: #ffffff;
+  transform: translateY(-0.2rem);
+}
+
+/* About Section */
+.about {
+  background-color: #ffffff;
+}
+
+/* Grid Layout (Skills & Projects) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  padding: 2.4rem 2rem;
+  text-align: left;
+  box-shadow: 0 1rem 2.4rem rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #004aad;
+}
+
+.card p {
+  font-size: 1.4rem;
+  color: #4b5563;
+  margin-bottom: 1.6rem;
+}
+
+.card:hover {
+  transform: translateY(-0.6rem);
+  box-shadow: 0 1.6rem 3.2rem rgba(15, 23, 42, 0.12);
+}
+
+/* Skill Tag */
+.tag {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 999px;
+  background-color: rgba(0, 74, 173, 0.08);
+  color: #004aad;
+  font-weight: 600;
+}
+
+/* Projects */
+.project-card {
+  position: relative;
+}
+
+.project-label {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  background-color: rgba(255, 183, 3, 0.14);
+  color: #92400e;
+  font-weight: 600;
+}
+
+/* Contact */
+.contact {
+  background-color: #ffffff;
+}
+
+.contact-form {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.form-row label {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: #364152;
+}
+
+.form-row input,
+.form-row textarea {
+  font-size: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.8rem;
+  border: 0.15rem solid #004aad;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f9fafb;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: #003380;
+  box-shadow: 0 0 0 0.2rem rgba(0, 74, 173, 0.15);
+}
+
+/* Footer */
+.footer {
+  background-color: #004aad;
+  color: #ffffff;
+  padding: 2rem 8vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+/* Back to Top Floating Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #004aad;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2rem;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#backToTop:hover {
+  background-color: #003380;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.4rem 2.4rem rgba(0, 0, 0, 0.32);
+}
+
+/* Animations */
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller laptops */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .header {
+    padding: 1.2rem 6vw;
+  }
+
+  .section {
+    padding: 5rem 6vw;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .nav {
+    gap: 1.2rem;
+  }
+
+  .nav a {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    padding-top: 6rem;
+  }
+
+  .hero-name {
+    font-size: 3.2rem;
+  }
+
+  .hero-role {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 4.4rem 5vw;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

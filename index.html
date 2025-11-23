@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">My Portfolio</div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello! I'm</p>
+        <h1 class="hero-name">Sherlock Holmes</h1>
+        <h2 class="hero-role">
+          <span class="role-title">Full Stack Developer</span>
+        </h2>
+        <p class="hero-description">
+          A consulting detective from London with a passion for building logical, efficient,
+          and user-friendly web experiences. I combine keen observation with modern web technologies.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="sherlock.jpg" alt="Profile Image">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Detective · Thinker · Developer</p>
+      <p class="section-text">
+        My name is Sherlock Holmes. I am a consulting detective from London, known for my
+        keen observation, logical reasoning, and forensic science skills. Now, I apply the
+        same analytical mindset to solving complex problems on the web — from frontend design
+        to backend logic.
+      </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">My Skills</h2>
+      <p class="section-subtitle">What I bring to the case</p>
+
+      <div class="grid skills-grid">
+        <div class="card">
+          <h3>Observation</h3>
+          <p>Expert at noticing details others miss, translating into pixel-perfect UI decisions.</p>
+          <span class="tag">Expert</span>
+        </div>
+        <div class="card">
+          <h3>Logical Reasoning</h3>
+          <p>Strong analytical skills for debugging, problem solving, and system design.</p>
+          <span class="tag">Expert</span>
+        </div>
+        <div class="card">
+          <h3>Forensic Science</h3>
+          <p>Methodical approach to testing and validating features before deployment.</p>
+          <span class="tag">Advanced</span>
+        </div>
+        <div class="card">
+          <h3>HTML &amp; CSS</h3>
+          <p>Clean, semantic layouts with responsive design using Flexbox and Grid.</p>
+          <span class="tag">Advanced</span>
+        </div>
+        <div class="card">
+          <h3>JavaScript</h3>
+          <p>Interactive, dynamic behavior with a focus on clarity and maintainability.</p>
+          <span class="tag">Intermediate</span>
+        </div>
+        <div class="card">
+          <h3>Problem Solving</h3>
+          <p>Ability to break complex tasks into simple, logical steps.</p>
+          <span class="tag">Expert</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-subtitle">Cases I've cracked</p>
+
+      <div class="grid projects-grid">
+        <div class="card project-card">
+          <h3>The Hound of the Baskervilles</h3>
+          <p>
+            Solved a mysterious case involving a spectral hound on the moors using logic,
+            deduction, and careful investigation.
+          </p>
+          <span class="project-label">Investigation · Mystery</span>
+        </div>
+        <div class="card project-card">
+          <h3>A Study in Scarlet</h3>
+          <p>
+            My first published case with Dr. Watson, demonstrating the power of analytical
+            reasoning and pattern recognition.
+          </p>
+          <span class="project-label">Case Study · Analysis</span>
+        </div>
+        <div class="card project-card">
+          <h3>Digital Footprints Tracker</h3>
+          <p>
+            Conceptual web project to trace, visualize, and analyze digital activities
+            across multiple sources.
+          </p>
+          <span class="project-label">Web Concept · UX</span>
+        </div>
+        <div class="card project-card">
+          <h3>Evidence Management Dashboard</h3>
+          <p>
+            A responsive dashboard layout for organizing clues, suspects, and case progress
+            in a clean, modern interface.
+          </p>
+          <span class="project-label">Dashboard · UI Design</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Let’s solve something together</p>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Sherlock Holmes. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#top">Back to Top</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <a href="#top" id="backToTop">↑</a>
+
+</body>
+</html>
